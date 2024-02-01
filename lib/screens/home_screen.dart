@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:interview_project/screens/widgets/circle_button.dart';
 import 'package:interview_project/screens/widgets/shoe_card.dart';
 
@@ -8,6 +9,32 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const GNav(
+          color: Colors.black,
+          activeColor: Color.fromARGB(255, 182, 9, 9),
+          gap: 4,
+          tabs: [
+            GButton(
+              onPressed: null,
+              icon: Icons.home_filled,
+              text: 'Home',
+            ),
+            GButton(
+              onPressed: null,
+              icon: Icons.favorite,
+              text: 'Favourite',
+            ),
+            GButton(
+              onPressed: null,
+              icon: Icons.bakery_dining_rounded,
+              text: 'offer',
+            ),
+            GButton(
+              onPressed: null,
+              icon: Icons.person,
+              text: 'profile',
+            ),
+          ]),
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
